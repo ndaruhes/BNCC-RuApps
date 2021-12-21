@@ -1,0 +1,307 @@
+@import './variables.scss';
+
+// HERO SECTION DESKTOP
+.hero-section {
+    padding: 75px 0 150px 0;
+
+    .hero-image-left {
+        display: none;
+    }
+
+    .hero-text {
+
+        h1,
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'RocknRoll One', sans-serif;
+        }
+
+        p {
+            font-size: 25px;
+            margin: 20px 0 40px 0;
+        }
+
+        .hero-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+}
+
+// ABOUT SECTION DESKTOP
+.about-text {
+    p {
+        font-size: 20px;
+    }
+}
+
+// SERVICES SECTION DESKTOP
+.services {
+    margin: 100px 0;
+
+    .section-title {
+        text-align: center;
+
+        .line {
+            width: 150px;
+            margin: 0 auto;
+        }
+    }
+
+    .service-content {
+        padding: 0 20px 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        color: $darkBlue;
+        background: #F8F9FA;
+        text-align: center;
+
+        span {
+            display: block;
+            margin: 0;
+        }
+
+        .icon {
+            font-size: 70px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .desc {
+            font-size: 20px;
+        }
+    }
+}
+
+// PARTNERS SECTION DESKTOP
+.partners {
+    margin: 50px 0;
+
+    .partner-content {
+        margin-bottom: 20px;
+        background: #F8F9FA;
+        padding: 20px;
+        min-height: 190px;
+        border-radius: 10px;
+        display: block;
+        color: $darkBlue;
+        text-decoration: none;
+
+        img {
+            width: 40%;
+        }
+
+        span {
+            display: block;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 5px 0;
+        }
+
+        .desc {
+            font-size: 20px;
+        }
+    }
+
+    .event {
+        .event-text {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event-iframe {
+            height: 300px;
+        }
+    }
+}
+
+// TESTIMONI SECTION DESKTOP
+.testimoni {
+
+    // 1. Founder Section Desktop
+    .founder-quotes {
+        text-align: center;
+
+        span {
+            display: block;
+            font-family: 'RocknRoll One', sans-serif;
+        }
+
+        .name {
+            font-size: 25px;
+        }
+
+        .jabatan {
+            color: grey;
+        }
+
+        .quote {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    }
+
+    // 2. Testimoni Item Desktop
+    .testimoni-item {
+        width: 50% !important;
+        padding: 15px;
+        margin: 0 10px !important;
+        background: #F8F9FA;
+        border-radius: 15px;
+
+        span {
+            display: block;
+            font-family: 'RocknRoll One', sans-serif;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .member {
+            font-size: 18px;
+            color: grey;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    // HERO SECTION MOBILE
+    .hero-section {
+        padding: 20px 0 50px 0;
+
+        .hero-image-left {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .hero-image-right {
+            display: none;
+        }
+
+        .hero-text {
+
+            h1,
+            span {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 18px;
+                margin: 10px 0 20px 0;
+            }
+
+            .hero-btn {
+                padding: 5px 10px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    // ABOUT SECTION MOBILE
+    .about-image {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        p {
+            font-size: 17px;
+        }
+    }
+
+    // SERVICES SECTION MOBILE
+    .services {
+        margin: 50px 0;
+
+        .service-content {
+            margin-bottom: 10px;
+
+            .icon {
+                font-size: 50px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .desc {
+                font-size: 17px;
+            }
+        }
+    }
+
+    // PARTNERS SECTION MOBILE
+    .partners {
+        .partner-content {
+            margin-bottom: 10px;
+
+            img {
+                width: 30%;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .desc {
+                font-size: 17px;
+            }
+        }
+
+        .event {
+            margin-top: 30px;
+
+            .event-text {
+                font-size: 17px;
+            }
+
+            .event-iframe {
+                height: 170px;
+            }
+        }
+    }
+
+    // TESTIMONI SECTION MOBILE
+    .testimoni {
+
+        // 1. Founder Section Mobile
+        .founder-quotes {
+            margin-bottom: 20px;
+
+            .name {
+                font-size: 20px;
+            }
+        }
+
+        // 2. Testimoni Item Mobile
+        .testimoni-item {
+            width: 75% !important;
+            margin: 0 5px !important;
+            border-radius: 10px;
+            min-height: 170px;
+
+            .quote {
+                font-size: 15px;
+            }
+
+            .member {
+                font-size: 13px;
+                margin-top: 10px;
+            }
+        }
+    }
+}

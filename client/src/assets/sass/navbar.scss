@@ -1,0 +1,31 @@
+// NAVBAR DESKTOP
+.navbar {
+    padding: 25px 0 !important;
+
+    .navbar-brand {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'RocknRoll One', sans-serif;
+    }
+
+    .nav-link {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+// NAVBAR MOBILE
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 0 !important;
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    .navbar-light .navbar-toggler {
+        border: none;
+    }
+}

@@ -1,0 +1,113 @@
+@import './variables.scss';
+
+// FOOTER DESKTOP
+.footer {
+    padding: 30px 0;
+
+    .footer-content {
+        span {
+            display: block;
+        }
+
+        .logo {
+            font-size: 35px;
+            font-family: 'RocknRoll One', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .desc {
+            font-size: 18px;
+        }
+
+        .title {
+            margin-bottom: 15px;
+
+            span {
+                font-family: 'RocknRoll One', sans-serif;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .line {
+                width: 100px;
+                height: 1px;
+                background: $darkBlue;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding: 5px 0;
+
+                a {
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+
+    .footer-map {
+        padding: 0;
+    }
+
+    .footer-text {
+        margin-top: 20px;
+        display: block;
+        font-size: 18px;
+    }
+}
+
+// FOOTER MOBILE
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 20px 0;
+
+        .footer-content {
+            margin-bottom: 25px;
+
+            .logo {
+                font-size: 30px;
+                margin-bottom: 5px;
+            }
+
+            .desc {
+                font-size: 17px;
+            }
+
+            .title {
+                margin-bottom: 10px;
+
+                span {
+                    font-size: 18px;
+                }
+
+                .line {
+                    width: 70px;
+                    height: 1.5px;
+                }
+            }
+
+            ul {
+                li {
+                    a {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .footer-map {
+            padding: 0 10px;
+        }
+
+        .footer-text {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+    }
+}

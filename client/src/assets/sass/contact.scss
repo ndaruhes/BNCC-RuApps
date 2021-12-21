@@ -1,0 +1,37 @@
+.btn-contact-wa {
+    background: #2bb741;
+    color: white;
+}
+
+.banner {
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 30px;
+
+    h1 {
+        font-size: 45px;
+        font-family: 'RocknRoll One', sans-serif;
+    }
+
+    p {
+        font-size: 20px;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* BANNER */
+    .banner {
+        padding: 30px;
+
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 17px;
+            width: 100%;
+        }
+    }
+}
