@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import appConfig from "./config/app"
+import '@/store/subscriber'
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -23,4 +24,6 @@ import 'swiper/css'
 import SwiperCore, { FreeMode } from 'swiper'
 SwiperCore.use([FreeMode])
 
-createApp(App).use(router).use(store).mount('#app')
+store.dispatch('auth/attempt', localStorage.getItem('token')).then(() => {
+    createApp(App).use(router).use(store).mount('#app')
+})

@@ -52,17 +52,9 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
 import Services from '@/components/Services.vue'
 import Partners from '@/components/Partners.vue'
 import Testimoni from '@/components/Testimoni.vue'
-
-const store = useStore()
-
-const name = computed(() => {
-    return store.state.user.name
-})
 </script>
 
 <style lang="scss">

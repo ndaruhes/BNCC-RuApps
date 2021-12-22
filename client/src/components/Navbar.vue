@@ -22,17 +22,37 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/contact"><i class="uil uil-phone-alt me-1"></i>Contact Us</router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/login"><i class="uil uil-sign-in-alt me-1"></i>Login</router-link>
-                    </li>
+                    <template v-if="authenticated">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="uil uil-user-circle me-1"></i>{{ user.namaLengkap }}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="#" @click="logout"><i class="uil uil-power me-1"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </template>
+                    <template v-else>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/login"><i class="uil uil-sign-in-alt me-1"></i>Login</router-link>
+                        </li>
+                    </template>
                 </ul>
             </div>
         </div>
     </nav>
 </template>
 
-<script>
-export default {}
+<script setup>
+import { computed } from 'vue'
+import store from '@/store'
+
+const authenticated = computed(() => store.getters['auth/authenticated'])
+const user = computed(() => store.getters['auth/user'])
+
+const logout = () => {
+    store.dispatch('auth/logout')
+}
 </script>
 
 <style lang="scss">
