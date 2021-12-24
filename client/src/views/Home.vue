@@ -52,9 +52,9 @@
 </template>
 
 <script setup>
-import Services from '@/components/Services.vue'
-import Partners from '@/components/Partners.vue'
-import Testimoni from '@/components/Testimoni.vue'
+import Services from '@/components/home/Services.vue'
+import Partners from '@/components/home/Partners.vue'
+import Testimoni from '@/components/home/Testimoni.vue'
 </script>
 
 <style lang="scss">

@@ -92,6 +92,7 @@ module.exports = {
                 email: user.email,
                 namaLengkap: user.namaLengkap,
                 role: user.role,
+                createdAt: user.createdAt
             },
         })
     },

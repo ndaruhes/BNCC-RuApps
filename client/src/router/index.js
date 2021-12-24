@@ -15,34 +15,52 @@ const routes = [
     {
         path: '/login',
         name: 'Login',
-        component: () => import(/* webpackChunkName: "Login" */ '@/views/Login.vue'),
-        beforeEnter: (to, from, next) => {
-            if(store.getters['auth/authenticated']){
-                return next({
-                    name : 'Home'
-                })
-            }
-            next()
-        }
+        component: () => import(/* webpackChunkName: "Login" */ '@/views/auth/Login.vue'),
+        beforeEnter: (to, from, next) => authenticated(next)
     },
     {
         path: '/register',
         name: 'Register',
-        component: () => import(/* webpackChunkName: "Register" */ '@/views/Register.vue'),
-        beforeEnter: (to, from, next) => {
-            if(store.getters['auth/authenticated']){
-                return next({
-                    name : 'Home'
-                })
-            }
-            next()
-        }
-    }
+        component: () => import(/* webpackChunkName: "Register" */ '@/views/auth/Register.vue'),
+        beforeEnter: (to, from, next) => authenticated(next)
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: () => import(/* webpackChunkName: "Profile" */ '@/views/auth/Profile.vue'),
+        beforeEnter: (to, from, next) => notAuthenticated(next)
+    },
+    {
+        path: '/testimoni',
+        name: 'Testimoni',
+        component: () => import(/* webpackChunkName: "Testimoni" */ '@/views/auth/Profile.vue'),
+        beforeEnter: (to, from, next) => notAuthenticated(next)
+    },
 ]
+
 const router = createRouter({
     history: createWebHistory(),
     linkActiveClass: 'active',
     routes
 })
+
+function notAuthenticated(next) {
+    if(!store.getters['auth/authenticated']){
+        return next({
+            name : 'Home'
+        })
+    }
+    next()
+}
+
+function authenticated(next) {
+    if(store.getters['auth/authenticated']){
+        return next({
+            name : 'Home'
+        })
+    }
+    next()
+}
+
 
 export default router

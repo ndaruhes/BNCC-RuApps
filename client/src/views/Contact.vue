@@ -1,11 +1,7 @@
 <template>
     <div>
-        <!-- CONTACT BANNER -->
-        <div class="container bg-light banner">
-            <h1>Feel Free to Contact Us 📞😊</h1>
-            <p class="mb-4">Jangan sungkan untuk menghubungi, kami siap untuk merespon masalah dan keluhan anda. Silahkan menghubungi kami melalui whatsapp atau form dibawah</p>
-            <a href="#" class="btn btn-contact-wa"><i class="uil uil-whatsapp me-1"></i>Whatsapp Call</a>
-        </div>
+        <!-- BANNER -->
+        <Banner />
 
         <!-- CONTACT CONTENT -->
         <div class="container">
@@ -32,10 +28,6 @@
     </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+import Banner from '@/components/layouts/Banner.vue'
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/sass/contact.scss';
-</style>

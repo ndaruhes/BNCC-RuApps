@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+.dashboard-menu {
+    .dashboard-menu-panel {
+        a {
+            margin-right: 10px;
+        }
+    }
+}
+
+.content-left {
+    margin-top: 30px;
+
+    .profile-group {
+        margin-bottom: 15px;
+
+        span {
+            display: block;
+        }
+
+        .title {
+            font-family: 'RocknRoll One', sans-serif;
+            font-size: 18px;
+        }
+
+        .value {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-menu {
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .dashboard-menu-panel {
+            width: 400px;
+        }
+    }
+}

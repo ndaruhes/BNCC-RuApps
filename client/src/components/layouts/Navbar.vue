@@ -11,7 +11,7 @@
                         <router-link class="nav-link" to="/"><i class="uil uil-estate me-1"></i>Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services"><i class="uil uil-setting me-1"></i>Services</a>
+                        <a class="nav-link" href="#services"><i class="uil uil-rocket me-1"></i>Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#partners"><i class="uil uil-users-alt me-1"></i>Partners</a>
@@ -25,9 +25,12 @@
                     <template v-if="authenticated">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="uil uil-user-circle me-1"></i>{{ user.namaLengkap }}
+                                <i class="uil uil-user-circle me-1"></i>{{ authenticated.namaLengkap }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                <li>
+                                    <router-link class="dropdown-item" to="/profile"><i class="uil uil-user me-1"></i>Profile</router-link>
+                                </li>
                                 <li><a class="dropdown-item" href="#" @click="logout"><i class="uil uil-power me-1"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -48,8 +51,6 @@ import { computed } from 'vue'
 import store from '@/store'
 
 const authenticated = computed(() => store.getters['auth/authenticated'])
-const user = computed(() => store.getters['auth/user'])
-
 const logout = () => {
     store.dispatch('auth/logout')
 }
