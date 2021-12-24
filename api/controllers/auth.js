@@ -1,4 +1,4 @@
-const {User} = require('../models/');
+const {User} = require('../models');
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const Validator = require('validatorjs')
@@ -12,7 +12,7 @@ module.exports = {
             password: req.body.password,
         }
 
-        if(userValidation(userReq, req.url) != null) return res.status(400).send(userValidation(userReq, req.url))
+        if(formValidation(userReq, req.url) != null) return res.status(400).send(formValidation(userReq, req.url))
 
         let user = await findUser(req.body.email)
         if(!user){
@@ -56,7 +56,7 @@ module.exports = {
             confirmPassword: req.body.confirmPassword,
         }
 
-        if(userValidation(userReq, req.url) != null) return res.status(400).send(userValidation(userReq, req.url))
+        if(formValidation(userReq, req.url) != null) return res.status(400).send(formValidation(userReq, req.url))
 
         let user = await findUser(req.body.email)
         if(user){
@@ -70,7 +70,7 @@ module.exports = {
                 })
 
                 res.status(201).json({
-                    data: {
+                    user: {
                         id: newUser.id,
                         email: newUser.email,
                         namaLengkap: newUser.namaLengkap
@@ -80,7 +80,7 @@ module.exports = {
             }catch(err){
                 res.status(400).json({
                     error: err.message,
-                    message: 'Terjadi kesalahan saat register'
+                    message: 'Upss terjadi kesalahan'
                 })
             }
         }        
@@ -88,7 +88,7 @@ module.exports = {
     profile: async (req, res) => {
         let user = await findUser(req.decoded.email)
         res.json({
-            data: {
+            user: {
                 email: user.email,
                 namaLengkap: user.namaLengkap,
                 role: user.role,
@@ -110,7 +110,7 @@ function verifyPassword(password, hashPassword){
     return hashPassword == null ? false : bcrypt.compareSync(password, hashPassword)
 }
 
-function userValidation(dataRequest, url){
+function formValidation(dataRequest, url){
     let rules
     if(url == '/register'){
         rules = {

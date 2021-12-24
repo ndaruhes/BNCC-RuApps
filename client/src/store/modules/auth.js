@@ -69,7 +69,7 @@ export default {
             }
             
             await axios.get('profile').then(res => {
-                commit('SET_USER', res.data.data)
+                commit('SET_USER', res.data.user)
             }).catch(() => {
                 commit('SET_USER', [])
                 commit('SET_TOKEN', null)

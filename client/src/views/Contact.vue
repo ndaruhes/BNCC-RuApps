@@ -3,7 +3,7 @@
         <!-- BANNER -->
         <Banner />
 
-        <!-- CONTACT CONTENT -->
+        <!-- CONTACT FORM -->
         <div class="container">
             <div class="col-md-5 py-3">
                 <form>

@@ -27,21 +27,9 @@
                             "spaceBetween": 50
                         }
                     }' :loop="true" :centeredSlides="true" :grabCursor="true" :freeMode="true" :pagination='{"clickable": true}'>
-                        <swiper-slide class="testimoni-item">
-                            <span class="quote">"Gokil banget sih ini, website gue langsung peringkat 1 google pake SEO Agency dari RuApps"</span>
-                            <span class="member">~ Arya Javas</span>
-                        </swiper-slide>
-                        <swiper-slide class="testimoni-item">
-                            <span class="quote">"Keren sekali sekarang bisnis saya sudah mempunyai website, Terima kasih RuApps, mantapp bangett"</span>
-                            <span class="member">~ Rafa Adila</span>
-                        </swiper-slide>
-                        <swiper-slide class="testimoni-item">
-                            <span class="quote">"Keren sekali sekarang bisnis saya sudah mempunyai website, Terima kasih RuApps, mantapp bangett"</span>
-                            <span class="member">~ Rabbani Qibar</span>
-                        </swiper-slide>
-                        <swiper-slide class="testimoni-item">
-                            <span class="quote">"Keren sekali sekarang bisnis saya sudah mempunyai website, Terima kasih RuApps, mantapp bangett"</span>
-                            <span class="member">~ Anggie Dwi</span>
+                        <swiper-slide class="testimoni-item" v-for="testimoni in allTestimoni" :key="testimoni.id">
+                            <span class="quote">"{{testimoni.quote}}"</span>
+                            <span class="member">~ {{testimoni.user}}</span>
                         </swiper-slide>
                     </swiper>
                 </div>
@@ -51,5 +39,17 @@
 </template>
 
 <script setup>
+import { computed, onMounted } from 'vue'
+import store from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+
+const getAllTestimoni = () => {
+    store.dispatch('testimoni/getAllTestimoni')
+}
+
+onMounted(() => {
+    getAllTestimoni()
+})
+
+const allTestimoni = computed(() => store.getters['testimoni/allTestimoni'])
 </script>

@@ -29,6 +29,20 @@
     }
 }
 
+.table-wrapper {
+    max-height: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .dashboard-menu {
         overflow-x: scroll;
@@ -42,5 +56,9 @@
         .dashboard-menu-panel {
             width: 400px;
         }
+    }
+
+    .content-right {
+        display: none;
     }
 }

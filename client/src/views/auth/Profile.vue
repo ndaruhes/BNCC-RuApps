@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- CONTACT BANNER -->
+        <!-- BANNER -->
         <Banner />
 
         <div class="container">
@@ -41,5 +41,5 @@ const authenticated = computed(() => store.getters['auth/authenticated'])
 </script>
 
 <style lang="scss">
-@import '@/assets/sass/profile.scss';
+@import '@/assets/sass/dashboard.scss';
 </style>
