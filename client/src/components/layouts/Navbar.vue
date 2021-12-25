@@ -11,13 +11,13 @@
                         <router-link class="nav-link" to="/"><i class="uil uil-estate me-1"></i>Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services"><i class="uil uil-rocket me-1"></i>Services</a>
+                        <a class="nav-link" :href="$route != '/' ? '/#services' : '#services'"><i class="uil uil-rocket me-1"></i>Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#partners"><i class="uil uil-users-alt me-1"></i>Partners</a>
+                        <a class="nav-link" :href="$route != '/' ? '/#partners' : '#partners'"><i class="uil uil-users-alt me-1"></i>Partners</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimoni"><i class="uil uil-laughing me-1"></i>Testimoni</a>
+                        <a class="nav-link" :href="$route != '/' ? '/#testimoni' : '#testimoni'"><i class="uil uil-laughing me-1"></i>Testimoni</a>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/contact"><i class="uil uil-phone-alt me-1"></i>Contact Us</router-link>

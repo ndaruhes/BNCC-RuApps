@@ -21,7 +21,7 @@
         </div>
 
         <!-- ABOUT -->
-        <div class="about">
+        <div class="about" data-aos="fade-up">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 about-image">

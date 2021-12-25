@@ -6,6 +6,7 @@
                 <component :is='Component'></component>
             </transition>
         </router-view>
+        <BackToTop />
         <Footer />
     </div>
 </template>
@@ -13,6 +14,7 @@
 <script setup>
 import Navbar from '@/components/layouts/Navbar.vue'
 import Footer from '@/components/layouts/Footer.vue'
+import BackToTop from '@/components/layouts/BackToTop.vue'
 </script>
 
 <style lang="scss">

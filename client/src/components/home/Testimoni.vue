@@ -3,12 +3,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- FOUNDER QUOTES -->
-                <div class="col-md-4 founder-quotes">
+                <div class="col-md-4 founder-quotes" data-aos="fade-right">
                     <img src="@/assets/images/ndaru.png" alt="Muhamad Ndaru" class="w-75">
                     <span class="name">Muhamad Ndaru Hestiafin</span>
                     <span class="jabatan">Founder RuApps<i class="uil uil-robot ms-1"></i></span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="fade-down">
                     <div class="section-title">
                         <h1>Testimoni Klien 😊</h1>
                         <div class="line"></div>

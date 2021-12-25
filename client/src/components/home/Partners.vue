@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <!-- PARTNERS SECTION -->
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-down">
                     <div class="section-title">
                         <h1>Rekan Kerja Sama ✨</h1>
                         <div class="line"></div>
@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- EVENT SECTION -->
-                <div class="col-md-6 event">
+                <div class="col-md-6 event" data-aos="fade-up">
                     <div class="section-title">
                         <h1>Event Terbesar Kami 🎉</h1>
                         <div class="line"></div>

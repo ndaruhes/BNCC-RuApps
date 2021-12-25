@@ -1,5 +1,5 @@
 <template>
-    <div class="services" id="services">
+    <div class="services" id="services" data-aos="fade-up">
         <div class="container">
             <div class="section-title">
                 <h1>Pelayanan Untuk Anda</h1>

@@ -13,17 +13,16 @@ body {
     color: $darkBlue !important;
 }
 
-
-::-moz-scrollbar {
+::-webkit-scrollbar {
     width: 5px;
 }
 
-::-moz-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #fff;
 }
 
-::-moz-scrollbar-thumb {
-    background: #3c4652;
+::-webkit-scrollbar-thumb {
+    background: grey;
 }
 
 // BAHAN
