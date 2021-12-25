@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="section-title">
-            <h1>Profile Anda</h1>
+            <h1><i class="uil uil-user me-1"></i>Profile Kamu</h1>
             <div class="line"></div>
         </div>
         <div class="user-info">

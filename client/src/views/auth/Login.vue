@@ -22,8 +22,8 @@
                     <div class="form-group mt-4">
                         Belum punya akun? daftar <router-link to="/register">disini</router-link>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm d-flex" :disabled="btnLoading">
-                        Submit
+                    <button type="submit" class="btn btn-primary btn-sm d-flex px-4" :disabled="btnLoading">
+                        Masuk
                         <span v-if="btnLoading" class="ms-1">
                             <DualBall />
                         </span>

@@ -159,6 +159,7 @@
         margin: 0 10px !important;
         background: #F8F9FA;
         border-radius: 15px;
+        min-height: 170px;
 
         span {
             display: block;
@@ -289,10 +290,10 @@
 
         // 2. Testimoni Item Mobile
         .testimoni-item {
-            width: 75% !important;
+            width: 90% !important;
             margin: 0 5px !important;
             border-radius: 10px;
-            min-height: 170px;
+            min-height: 140px;
 
             .quote {
                 font-size: 15px;

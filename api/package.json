@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon ./bin/www",
-    "migrate:fresh": "sequelize db:migrate:undo:all && sequelize db:migrate"
+    "migrate:fresh": "sequelize db:migrate:undo:all && sequelize db:migrate",
+    "seed:fresh": "sequelize db:seed:undo:all && sequelize db:seed:all"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

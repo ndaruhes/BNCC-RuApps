@@ -6,7 +6,7 @@
 
         <!-- SECTION TITLE -->
         <div class="section-title">
-            <h1>Messages</h1>
+            <h1><i class="uil uil-envelope me-1"></i>Pesan Masuk</h1>
             <div class="line"></div>
         </div>
 
