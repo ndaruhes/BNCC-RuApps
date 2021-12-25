@@ -10,8 +10,18 @@
                     Kamu yakin mau hapus?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tidak</button>
-                    <button type="button" class="btn btn-danger btn-sm d-flex" @click="deleteTestimoni(id)">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
+
+                    <!-- DELETE TESTIMONI -->
+                    <button type="button" class="btn btn-danger btn-sm d-flex" @click="deleteTestimoni(testimoniId)" v-if=" testimoniId != null" :disabled="btnLoading">
+                        Yakin
+                        <span v-if="btnLoading" class="ms-1">
+                            <DualBall />
+                        </span>
+                    </button>
+
+                    <!-- DELETE MESSAGE -->
+                    <button type="button" class="btn btn-danger btn-sm d-flex" @click="deleteMessage(messageId)" v-if=" messageId != null" :disabled="btnLoading">
                         Yakin
                         <span v-if="btnLoading" class="ms-1">
                             <DualBall />
@@ -27,7 +37,7 @@
 import { mapGetters } from 'vuex'
 import DualBall from '@/components/loadings/DualBall.vue'
 export default {
-    props: ['user', 'id'],
+    props: ['user', 'testimoniId', 'messageId'],
     components: { DualBall },
     computed: {
         ...mapGetters({
@@ -36,8 +46,13 @@ export default {
     },
     methods: {
         deleteTestimoni(id) {
-            let data = { user: this.$props.user, id: this.id }
+            let data = { user: this.$props.user, id: id }
             this.$store.dispatch('testimoni/deleteTestimoni', data).then(() => {
+                this.$refs.modalClose.click()
+            })
+        },
+        deleteMessage(id) {
+            this.$store.dispatch('message/deleteMessage', id).then(() => {
                 this.$refs.modalClose.click()
             })
         },

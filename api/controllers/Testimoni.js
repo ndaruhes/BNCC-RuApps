@@ -10,7 +10,8 @@ module.exports = {
                 return {
                     id: item.id,
                     quote: item.quote,
-                    user: item.user.namaLengkap
+                    user: item.user.namaLengkap,
+                    email: item.user.email
                 }
             }))
         }catch(err){
@@ -27,7 +28,8 @@ module.exports = {
                 return {
                     id: item.id,
                     quote: item.quote,
-                    user: item.user.namaLengkap
+                    user: item.user.namaLengkap,
+                    email: item.user.email
                 }
             }))
         }catch(err){
@@ -66,7 +68,9 @@ module.exports = {
                 res.json({
                     id: testimoni.id,
                     quote: testimoni.quote,
-                    user: testimoni.user.namaLengkap
+                    createdAt: testimoni.createdAt,
+                    user: testimoni.user.namaLengkap,
+                    email: testimoni.user.email
                 })
             }else{
                 res.status(404).json({message : 'Testimoni tidak ditemukan'})

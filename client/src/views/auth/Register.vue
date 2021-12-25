@@ -32,7 +32,7 @@
                     <div class="form-group mt-4">
                         Sudah punya akun? masuk <router-link to="/login">disini</router-link>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-sm d-flex">
+                    <button type="submit" class="btn btn-primary btn-sm d-flex" :disabled="btnLoading">
                         Submit
                         <span v-if="btnLoading" class="ms-1">
                             <DualBall />

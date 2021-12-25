@@ -3,17 +3,16 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Contact extends Model {
     static associate(models) {}
   };
-  User.init({
+  Contact.init({
     namaLengkap: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    role: DataTypes.ENUM('Admin', 'Member'),
+    pesan: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'Contact',
   });
-  return User;
+  return Contact;
 };

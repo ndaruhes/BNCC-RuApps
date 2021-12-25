@@ -1,19 +1,14 @@
 import axios from 'axios'
-import router from '@/router'
 
 export default {
     namespaced: true,
     state: () => ({
         allTestimoni: [],
-        testimoni: {},
+        testimoni: {}
     }),
     getters: {
-        allTestimoni(state){
-            return state.allTestimoni
-        },
-        testimoni(state){
-            return state.testimoni
-        },
+        allTestimoni: state => state.allTestimoni,
+        testimoni: state => state.testimoni
     },
     mutations: {
         SET_ALL_TESTIMONI(state, data){

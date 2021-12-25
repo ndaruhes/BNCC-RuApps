@@ -31,7 +31,7 @@ import Banner from '@/components/layouts/Banner.vue'
 import DashboardMenu from '@/components/dashboard/DashboardMenu.vue'
 import UserInfo from '@/components/dashboard/UserInfo.vue'
 import Testimoni from '@/components/dashboard/testimoni/Testimoni.vue'
-import Messages from '@/components/dashboard/Messages.vue'
+import Messages from '@/components/dashboard/message/Messages.vue'
 
 import { computed } from 'vue'
 import store from '@/store'

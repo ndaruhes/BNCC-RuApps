@@ -5,15 +5,11 @@ export default {
     namespaced: true,
     state: () => ({
         token: null,
-        user: [],
+        user: []
     }),
     getters: {
-        authenticated(state){
-            return state.token && state.user
-        },
-        user(state){
-            return state.user
-        }
+        authenticated: state => state.token && state.user,
+        user: state => state.user
     },
     mutations: {
         SET_TOKEN(state, token){

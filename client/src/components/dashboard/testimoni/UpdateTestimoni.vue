@@ -16,7 +16,7 @@
                             <small class="text-grey">{{user.email}}</small>
                         </div>
                     </div>
-                    <form @submit.prevent="submit">
+                    <form @submit.prevent="submit" :disabled="btnLoading">
                         <div class="form-group">
                             <textarea rows="4" class="form-control" :class="{'is-invalid': formErrors.quote && formErrors.quote.length > 0}" placeholder="Berikan pendapat atau testimoni anda 😁" v-model="testimoni.quote"></textarea>
                             <small class="text-danger" v-if="formErrors.quote">*{{formErrors.quote[0]}}</small>
@@ -38,10 +38,13 @@
 import { mapGetters } from 'vuex'
 import DualBall from '@/components/loadings/DualBall.vue'
 export default {
-    props: ['user', 'id'],
+    props: ['user', 'testimoniId'],
     watch: {
-        id: function () {
-            this.$store.dispatch('testimoni/getTestimoni', this.$props.id)
+        testimoniId: function () {
+            this.$store.dispatch(
+                'testimoni/getTestimoni',
+                this.$props.testimoniId
+            )
         },
     },
     computed: {

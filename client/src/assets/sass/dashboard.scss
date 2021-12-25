@@ -41,6 +41,23 @@
     &::-webkit-scrollbar {
         display: none;
     }
+
+    .table {
+        td {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .action-btn-table {
+            font-size: 20px;
+            text-align: center;
+
+            span,
+            a {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .modal-user-info {
@@ -61,7 +78,7 @@
         }
 
         .dashboard-menu-panel {
-            width: 400px;
+            width: 500px;
         }
     }
 

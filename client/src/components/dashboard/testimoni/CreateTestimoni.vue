@@ -21,7 +21,7 @@
                             <textarea rows="4" class="form-control" :class="{'is-invalid': formErrors.quote && formErrors.quote.length > 0}" placeholder="Berikan pendapat atau testimoni anda 😁" v-model="form.quote"></textarea>
                             <small class="text-danger" v-if="formErrors.quote">*{{formErrors.quote[0]}}</small>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm d-flex">
+                        <button type="submit" class="btn btn-primary btn-sm d-flex" :disabled="btnLoading">
                             Submit
                             <span v-if="btnLoading" class="ms-1">
                                 <DualBall />

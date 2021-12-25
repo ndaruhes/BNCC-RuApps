@@ -1,6 +1,7 @@
 import {createStore} from 'vuex'
 import auth from './modules/auth'
 import testimoni from './modules/testimoni'
+import message from './modules/message'
 
 const stores = createStore({
     state: {
@@ -24,7 +25,7 @@ const stores = createStore({
             return state.formErrors
         }
     },
-    modules: {auth, testimoni}
+    modules: {auth, testimoni, message}
 })
 
 export default stores

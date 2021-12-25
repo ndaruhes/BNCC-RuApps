@@ -1,9 +1,10 @@
 <template>
     <div>
-        <!-- CREATE, UPDATE, DELETE TESTIMONI -->
+        <!-- CREATE, SHOW, UPDATE, DELETE TESTIMONI -->
         <CreateTestimoni :user="user" />
-        <UpdateTestimoni :user="user" :id="testimoniId" />
-        <DeleteTestimoni :user="user" :id="testimoniId" />
+        <ShowTestimoni :testimoniId="testimoniId" />
+        <UpdateTestimoni :user="user" :testimoniId="testimoniId" />
+        <DeleteTestimoni :user="user" :testimoniId="testimoniId" />
 
         <!-- SECTION TITLE -->
         <div class="section-title">
@@ -20,21 +21,28 @@
             <div class="table-wrapper bg-light">
                 <table class="table">
                     <thead>
-                        <tr align="center">
+                        <tr>
                             <th>#</th>
                             <th>Testimoni</th>
-                            <th>Member</th>
-                            <th>Aksi</th>
+                            <th v-if="user.role == 'Admin'">Member</th>
+                            <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody align="center">
+                    <tbody>
                         <tr v-for="(testimoni, index) in allTestimoni" :key="testimoni.id">
-                            <th>{{index+1}}</th>
-                            <td>{{testimoni.quote}}</td>
-                            <td>{{testimoni.user}}</td>
+                            <td class="fw-bold">{{index+1}}</td>
                             <td>
-                                <button class="btn btn-primary btn-sm me-1" data-bs-toggle="modal" data-bs-target="#updateModal" @click="setId(testimoni.id)" v-if="user.role == 'Member'"><i class="uil uil-edit me-1"></i>Edit</button>
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" @click="setId(testimoni.id)"><i class="uil uil-trash-alt me-1"></i>Hapus</button>
+                                {{testimoni.quote.substring(0, 30) + "..."}}
+                                <small class="d-block"><i class="uil uil-calendar-alt me-1"></i>{{moment(testimoni.createdAt).locale('id').format('LL')}}</small>
+                            </td>
+                            <td v-if="user.role == 'Admin'">
+                                {{testimoni.user}}
+                                <small class="d-block">{{testimoni.email}}</small>
+                            </td>
+                            <td class="action-btn-table">
+                                <span class="text-dark" :class="{'me-1': user.role == 'Admin'}" data-bs-toggle="modal" data-bs-target="#showModal" @click="setId(testimoni.id)"><i class="uil uil-eye"></i></span>
+                                <span class="text-primary mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" @click="setId(testimoni.id)" v-if="user.role == 'Member'"><i class="uil uil-edit"></i></span>
+                                <span class="text-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" @click="setId(testimoni.id)"><i class="uil uil-trash-alt"></i></span>
                             </td>
                         </tr>
                     </tbody>
@@ -47,6 +55,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import CreateTestimoni from '@/components/dashboard/testimoni/CreateTestimoni.vue'
+import ShowTestimoni from '@/components/dashboard/testimoni/ShowTestimoni.vue'
 import UpdateTestimoni from '@/components/dashboard/testimoni/UpdateTestimoni.vue'
 import DeleteTestimoni from '@/components/modals/DeleteModal.vue'
 
@@ -65,16 +74,33 @@ export default {
             user: 'auth/user',
         }),
     },
-    components: { CreateTestimoni, UpdateTestimoni, DeleteTestimoni },
+    components: {
+        CreateTestimoni,
+        ShowTestimoni,
+        UpdateTestimoni,
+        DeleteTestimoni,
+    },
     methods: {
         getAllTestimoni() {
-            this.user.role == 'Admin' ? this.$store.dispatch('testimoni/getAllTestimoni', 'allTestimoni') : this.$store.dispatch('testimoni/getAllTestimoni', 'userTestimoni')
+            this.user.role == 'Admin'
+                ? this.$store.dispatch(
+                      'testimoni/getAllTestimoni',
+                      'allTestimoni'
+                  )
+                : this.$store.dispatch(
+                      'testimoni/getAllTestimoni',
+                      'userTestimoni'
+                  )
         },
         setId(id) {
             this.testimoniId = id
         },
     },
 }
+</script>
+
+<script setup>
+import moment from 'moment/min/moment-with-locales'
 </script>
 
 <style lang="scss" scoped>

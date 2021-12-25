@@ -13,7 +13,11 @@
                         <h1>Testimoni Klien 😊</h1>
                         <div class="line"></div>
                     </div>
-                    <swiper :breakpoints='{
+                    <template v-if="allTestimoni.length == 0">
+                        <div class="alert alert-warning"><i class="uil uil-sad-squint me-1"></i>Belum ada testimoni</div>
+                    </template>
+                    <template v-else>
+                        <swiper :breakpoints='{
                         "640": {
                             "slidesPerView": 1,
                             "spaceBetween": 20
@@ -27,11 +31,12 @@
                             "spaceBetween": 50
                         }
                     }' :loop="true" :centeredSlides="true" :grabCursor="true" :freeMode="true" :pagination='{"clickable": true}'>
-                        <swiper-slide class="testimoni-item" v-for="testimoni in allTestimoni" :key="testimoni.id">
-                            <span class="quote">"{{testimoni.quote}}"</span>
-                            <span class="member">~ {{testimoni.user}}</span>
-                        </swiper-slide>
-                    </swiper>
+                            <swiper-slide class="testimoni-item" v-for="testimoni in allTestimoni" :key="testimoni.id">
+                                <span class="quote">"{{testimoni.quote}}"</span>
+                                <span class="member">~ {{testimoni.user}}</span>
+                            </swiper-slide>
+                        </swiper>
+                    </template>
                 </div>
             </div>
         </div>
