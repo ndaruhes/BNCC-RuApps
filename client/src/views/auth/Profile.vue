@@ -11,12 +11,10 @@
             <div class="row">
                 <div class="col-md-6 content-left">
                     <UserInfo v-if="$route.path == '/profile'" />
+                    <Testimoni v-if="$route.path == '/testimoni'" />
 
                     <template v-if="authenticated.role == 'Admin'">
-
-                    </template>
-                    <template v-else-if="authenticated.role == 'Member'">
-                        <Testimoni v-if="$route.path == '/testimoni'" />
+                        <Messages v-if="$route.path == '/messages'" />
                     </template>
                 </div>
                 <div class="col-md-6 content-right">
@@ -32,7 +30,8 @@
 import Banner from '@/components/layouts/Banner.vue'
 import DashboardMenu from '@/components/dashboard/DashboardMenu.vue'
 import UserInfo from '@/components/dashboard/UserInfo.vue'
-import Testimoni from '@/components/dashboard/Testimoni.vue'
+import Testimoni from '@/components/dashboard/testimoni/Testimoni.vue'
+import Messages from '@/components/dashboard/Messages.vue'
 
 import { computed } from 'vue'
 import store from '@/store'

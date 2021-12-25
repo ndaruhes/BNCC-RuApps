@@ -1,22 +1,31 @@
 const {Testimoni, User} = require('../models');
-const jwt = require('jsonwebtoken')
 const Validator = require('validatorjs')
 const validatorMessage = require('../config/validatorMessage')
 
 module.exports = {
-    index: async(req, res) => {
-        const token = req.headers['authorization']
-        let decoded = jwt.verify(token, process.env.JWT_SECRET)
-        
+    allTestimoni: async(req, res) => {
         try{
-            let testimoni
-            if(decoded.role == 'Member'){
-                testimoni = await Testimoni.findAll({include: [{model: User, as: 'user'}], where: {userId: decoded.id}})
-            }else{
-                testimoni = await Testimoni.findAll({include: [{model: User, as: 'user'}]})
-            }
+            let testimoni = await Testimoni.findAll({include: [{model: User, as: 'user'}]})
             res.send(testimoni.map(item => {
                 return {
+                    id: item.id,
+                    quote: item.quote,
+                    user: item.user.namaLengkap
+                }
+            }))
+        }catch(err){
+            res.status(400).json({
+                error: err.message,
+                message: 'Upss terjadi kesalahan'
+            })
+        }
+    },
+    userTestimoni: async(req, res) => {
+        try{
+            let testimoni = await Testimoni.findAll({include: [{model: User, as: 'user'}], where: {userId: req.decoded.id}})
+            res.send(testimoni.map(item => {
+                return {
+                    id: item.id,
                     quote: item.quote,
                     user: item.user.namaLengkap
                 }
@@ -34,6 +43,7 @@ module.exports = {
             userId: req.decoded.id
         }
 
+        if(req.decoded.role == 'Admin') return res.status(403).json({message: 'Admin tidak dapat menambah testimoni'})
         if(formValidation(testimoniReq, req.url) != null) return res.status(400).send(formValidation(testimoniReq, req.url))
 
         try{
@@ -54,6 +64,7 @@ module.exports = {
             const testimoni = await findTestimoni(req.params.id)
             if(testimoni != null){
                 res.json({
+                    id: testimoni.id,
                     quote: testimoni.quote,
                     user: testimoni.user.namaLengkap
                 })
@@ -72,6 +83,7 @@ module.exports = {
         if(testimoni != null){
             const testimoniReq = {quote: req.body.quote}
             
+            if(req.decoded.role == 'Admin') return res.status(403).json({message: 'Admin tidak dapat mengubah testimoni'})
             if(formValidation(testimoniReq, req.url) != null) return res.status(400).send(formValidation(testimoniReq, req.url))
 
             if(testimoni.userId == req.decoded.id){
@@ -98,7 +110,7 @@ module.exports = {
     delete: async(req, res) => {
         const testimoni = await findTestimoni(req.params.id)
         if(testimoni != null){
-            if(testimoni.userId == req.decoded.id){
+            if(testimoni.userId == req.decoded.id || req.decoded.role == 'Admin'){
                 try{
                     testimoni.destroy()
                     res.json({
@@ -112,7 +124,7 @@ module.exports = {
                     })
                 }
             }else{
-                res.status(403).json({message: 'Upss terjadi kesalahan'})
+                res.status(403).json({message: 'Tidak dapat menghapus'})
             }
         }else{
             res.status(404).json({message : 'Testimoni tidak ditemukan'})

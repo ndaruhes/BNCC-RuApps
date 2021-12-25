@@ -27,20 +27,20 @@ export default {
         async register({commit}, credentials){
             commit('SET_FORM_ERRORS', {}, {root: true})
             commit('SET_BUTTON_LOADING', true, {root: true})
-            let data = await axios.post('register', credentials).then(res => {
+            let response = await axios.post('register', credentials).then(res => {
                 commit('SET_BUTTON_LOADING', false, {root: true})
                 window.notyf.success(res.data.message)
                 router.push('/login')
                 return res
             }).catch(err => {
-                if(err.response.data.errors){
+                commit('SET_BUTTON_LOADING', false, {root: true})
+                if(err.response){
                     commit('SET_FORM_ERRORS', err.response.data.errors, {root: true})
                 }
-                commit('SET_BUTTON_LOADING', false, {root: true})
                 window.notyf.error(err.response.data.message)
                 return err.response
             })
-            return data
+            return response
         },
         async login({commit, dispatch}, credentials) {
             commit('SET_FORM_ERRORS', {}, {root: true})
@@ -53,11 +53,9 @@ export default {
             }).catch(err => {
                 commit('SET_BUTTON_LOADING', false, {root: true})
                 if(err.response){
-                    if(err.response.data.errors){
-                        commit('SET_FORM_ERRORS', err.response.data.errors, {root: true})
-                    }
-                    window.notyf.error(err.response.data.message)
+                    commit('SET_FORM_ERRORS', err.response.data.errors, {root: true})
                 }
+                window.notyf.error(err.response.data.message)
             })
         },
         async attempt({commit, state}, token){
@@ -79,6 +77,7 @@ export default {
             commit('SET_TOKEN', null)
             commit('SET_USER', [])
             window.notyf.success("Berhasil Logout")
+            router.push('/')
         }
     }
 }

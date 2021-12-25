@@ -44,7 +44,7 @@ import store from '@/store'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 const getAllTestimoni = () => {
-    store.dispatch('testimoni/getAllTestimoni')
+    store.dispatch('testimoni/getAllTestimoni', 'allTestimoni')
 }
 
 onMounted(() => {

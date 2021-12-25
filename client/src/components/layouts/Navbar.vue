@@ -29,7 +29,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="userDropdown">
                                 <li>
-                                    <router-link class="dropdown-item" to="/profile"><i class="uil uil-user me-1"></i>Profile</router-link>
+                                    <router-link class="dropdown-item" to="/profile"><i class="uil uil-external-link-alt me-1"></i>Dashboard</router-link>
                                 </li>
                                 <li><a class="dropdown-item" href="#" @click="logout"><i class="uil uil-power me-1"></i>Logout</a></li>
                             </ul>

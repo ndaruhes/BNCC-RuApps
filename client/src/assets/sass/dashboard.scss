@@ -11,7 +11,7 @@
 .content-left {
     margin-top: 30px;
 
-    .profile-group {
+    .user-info {
         margin-bottom: 15px;
 
         span {
@@ -43,6 +43,13 @@
     }
 }
 
+.modal-user-info {
+    span {
+        font-family: 'RocknRoll One', sans-serif;
+        display: block;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .dashboard-menu {
         overflow-x: scroll;
@@ -60,5 +67,11 @@
 
     .content-right {
         display: none;
+    }
+
+    .table-wrapper {
+        .table {
+            width: 700px;
+        }
     }
 }

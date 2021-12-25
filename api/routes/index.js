@@ -20,7 +20,8 @@ router.post('/register', AuthController.register);
 router.get('/profile', CheckAuth, AuthController.profile);
 
 // TESTIMONI
-router.get('/testimoni', TestimoniController.index);
+router.get('/allTestimoni', TestimoniController.allTestimoni);
+router.get('/userTestimoni', CheckAuth, TestimoniController.userTestimoni);
 router.post('/testimoni', CheckAuth, TestimoniController.store);
 router.get('/testimoni/:id', CheckAuth, TestimoniController.show);
 router.put('/testimoni/:id', CheckAuth, TestimoniController.update);

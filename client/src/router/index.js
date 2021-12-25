@@ -36,6 +36,12 @@ const routes = [
         component: () => import(/* webpackChunkName: "Testimoni" */ '@/views/auth/Profile.vue'),
         beforeEnter: (to, from, next) => notAuthenticated(next)
     },
+    {
+        path: '/messages',
+        name: 'Messages',
+        component: () => import(/* webpackChunkName: "Messages" */ '@/views/auth/Profile.vue'),
+        beforeEnter: (to, from, next) => authenticatedAdmin(next)
+    },
 ]
 
 const router = createRouter({
@@ -62,5 +68,13 @@ function authenticated(next) {
     next()
 }
 
+function authenticatedAdmin(next) {
+    if(store.getters['auth/authenticated'] && store.getters['auth/user'].role != 'Admin'){
+        return next({
+            name : 'Home'
+        })
+    }
+    next()
+}
 
 export default router
