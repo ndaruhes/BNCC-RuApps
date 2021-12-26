@@ -4,12 +4,13 @@
 <br>
 
 ## A. LIVE DEMO
-<span>Untuk demo aplikasi dapat diakses pada link berikut</span>
-<h4>https://ruapps.netlify.app</h4>
+<b>Untuk demo aplikasi dapat diakses pada link berikut</b>
+<span>https://ruapps.netlify.app</span>
 
-<span>Link Assets RuApps</span>
-<h4>https://undraw.co/ (Illustration)</h4>
-<h4>https://iconscout.com/ (Icons)</h4>
+<br>
+<b>Link Assets RuApps</b>
+<span>https://undraw.co/ (Illustration)</span>
+<span>https://iconscout.com/ (Icons)</span>
 
 <br>
 
