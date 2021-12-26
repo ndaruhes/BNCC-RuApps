@@ -43,7 +43,7 @@ cd BNCC-RuApps
 <br>
 
 <b>2. Setup API</b>
-<p>Ubah credentials database jika perlu didalam folder api file .env</p>
+<p>Ubah credentials database (jika perlu) didalam folder api file .env</p>
 <ul>
     <li>DB_DATABASE</li>
     <li>DB_USERNAME</li>
