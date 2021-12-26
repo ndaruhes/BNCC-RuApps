@@ -3,12 +3,13 @@
 
 <br>
 
-## A. LIVE DEMO
-<b>Screenshots</b>
-<img src="https://i2.paste.pics/FGV9E.png" width="100%">
-<img src="https://i2.paste.pics/FGV94.png" width="100%">
+## A. SCREENSHOTS
+<img src="https://i2.paste.pics/FGV9E.png" width="47.5%" style="margin-right: 5%;">
+<img src="https://i2.paste.pics/FGV94.png" width="47.5%">
 
 <br>
+
+## B. LIVE DEMO
 <b>Untuk demo aplikasi dapat diakses pada link berikut</b> <br>
 <span>https://ruapps.netlify.app</span> <br>
 
@@ -20,7 +21,7 @@
 
 <br>
 
-## B. FEATURES
+## C. FEATURES
 <b>1. FrontEnd</b>
 <ul>
 	<li>Navbar ✔️</li>
@@ -45,7 +46,7 @@
 
 <br>
 
-## C. USER ROLES
+## D. USER ROLES
 <p>Credentials user dapat dilihat di initial data & semua passwordnya adalah <i>12345</i></p>
 <b>1. Admin</b>
 
@@ -74,7 +75,7 @@ password: 12345
 
 <br>
 
-## D. SETUP PROJECT
+## E. SETUP PROJECT
 <b>1. Clone Repository</b>
 
 ```
