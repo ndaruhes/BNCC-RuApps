@@ -23,10 +23,10 @@
                                 <div class="line"></div>
                             </div>
                             <ul>
-                                <li><a href="#">Layanan</a></li>
-                                <li><a href="#">Rekan Kerja Sama</a></li>
-                                <li><a href="#">Testimoni</a></li>
-                                <li><a href="#">Login</a></li>
+                                <li><a :href="$route == '/' ? '#services' : '/#services'">Layanan</a></li>
+                                <li><a :href="$route == '/' ? '#partners' : '/#partners'">Rekan Kerja Sama</a></li>
+                                <li><a :href="$route == '/' ? '#testimoni' : '/#testimoni'">Testimoni</a></li>
+                                <li><router-link to="/login">Login</router-link></li>
                             </ul>
                         </div>
                     </div>

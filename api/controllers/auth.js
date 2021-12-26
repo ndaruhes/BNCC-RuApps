@@ -20,9 +20,8 @@ module.exports = {
         }else{
             if(!verifyPassword(userReq.password, user.password)) return res.status(400).json({message: 'Kombinasi email dan password tidak sesuai'})
 
-            const token = jwt.sign(user.toJSON(), JWT_SECRET, {
-                expiresIn: JWT_SECRET_EXPIRES
-            })
+            let jwtExpires = req.body.rememberMe ? {} : {expiresIn: JWT_SECRET_EXPIRES}
+            let token = jwt.sign(user.toJSON(), JWT_SECRET, jwtExpires)
 
             if(user.role == 'Admin'){
                 res.json({

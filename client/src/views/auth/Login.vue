@@ -16,7 +16,7 @@
                         <small class="text-danger" v-if="formErrors.password">*{{formErrors.password[0]}}</small>
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberCheck">
+                        <input type="checkbox" class="form-check-input" id="rememberCheck" v-model="form.rememberMe">
                         <label class="form-check-label" for="rememberCheck">Remember me</label>
                     </div>
                     <div class="form-group mt-4">
@@ -45,6 +45,7 @@ import DualBall from '@/components/loadings/DualBall.vue'
 const form = ref({
     email: '',
     password: '',
+    rememberMe: false,
 })
 
 const btnLoading = computed(() => store.getters['btnLoading'])

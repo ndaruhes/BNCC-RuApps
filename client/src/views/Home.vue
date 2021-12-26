@@ -9,7 +9,8 @@
                     </div>
                     <div class="col-md-7 hero-text">
                         <h1>Kembangkan bisnis anda bersama <span class="text-primary">RuApps <i class="uil uil-robot ms-1"></i></span></h1>
-                        <p>Millions of developers use RuApps to ship faster, simplify their workflows, and scale effortlessly.</p>
+                        <p>Jutaan orang telah terbantu <b>RuApps</b> untuk mengembangkan bisnis mereka menjadi maju. Sekarang giliran kamu 😊</p>
+                        <!-- <p>Millions of developers use RuApps to ship faster, simplify their workflows, and scale effortlessly.</p> -->
                         <a href="#about" class="btn btn-primary hero-btn">Yukk, gas eksplor <i class="uil uil-rocket ms-1"></i></a>
                         <router-link to="/contact" class="btn btn-outline-dark hero-btn">Hubungi CS</router-link>
                     </div>

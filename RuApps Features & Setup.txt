@@ -1,0 +1,2 @@
+Penjelasan fitur dan setup project dapat diakses di link repository ini
+https://github.com/ndaruhes/BNCC-RuApps

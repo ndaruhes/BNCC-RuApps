@@ -17,28 +17,28 @@
                     <div class="col-md-12 service-content" id="service-content2">
                         <span class="icon"><i class="uil uil-globe"></i></span>
                         <span class="title">Search Engine Optimization</span>
-                        <span class="desc">Kami dapat membuat aplikasi sesuai yang anda inginkan</span>
+                        <span class="desc">Website anda akan nomor satu di pencarian situs</span>
                     </div>
                 </div>
                 <div class="col-md-4 service">
                     <div class="col-md-12 service-content" id="service-content3">
                         <span class="icon"><i class="uil uil-rocket"></i></span>
                         <span class="title">Product Branding</span>
-                        <span class="desc">Kami dapat membuat aplikasi sesuai yang anda inginkan</span>
+                        <span class="desc">Membuat identitas produk menjadi menarik bersama kami</span>
                     </div>
                 </div>
                 <div class="col-md-4 service">
                     <div class="col-md-12 service-content" id="service-content5">
                         <span class="icon"><i class="uil uil-server"></i></span>
                         <span class="title">Web Hosting</span>
-                        <span class="desc">Kami dapat membuat aplikasi sesuai yang anda inginkan</span>
+                        <span class="desc">Kami menyediakan hosting yang cocok untuk kebutuhan anda</span>
                     </div>
                 </div>
                 <div class="col-md-4 service">
                     <div class="col-md-12 service-content" id="service-content4">
                         <span class="icon"><i class="uil uil-book-reader"></i></span>
                         <span class="title">Online Course</span>
-                        <span class="desc">Kami dapat membuat aplikasi sesuai yang anda inginkan</span>
+                        <span class="desc">Pembelajaran daring mengenai tips dan trik dalam membangun bisnis</span>
                     </div>
                 </div>
             </div>
