@@ -18,7 +18,7 @@
 	<li>Fetch API (opsional) ✔️</li>
 </ul>
 
-x<br>
+<br>
 
 <b>2. BACKEND</b>
 <ul>
