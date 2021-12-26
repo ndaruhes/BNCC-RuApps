@@ -3,13 +3,13 @@
 
 <br>
 
-## Live Demo
+## A. LIVE DEMO
 <h4>https://ruapps.netlify.app</h4>
 
 <br>
 
-## Features
-<b>1. FRONTEND</b>
+## B. FEATURES
+<b>1. FrontEnd</b>
 <ul>
 	<li>Navbar ✔️</li>
 	<li>Hero section ✔️</li>
@@ -24,7 +24,7 @@
 
 <br>
 
-<b>2. BACKEND</b>
+<b>2. BackEnd</b>
 <ul>
 	<li>Fitur CRUD (Create, Read, Update, Delete)  ✔️</li>
 	<li>Otentikasi (Signup dan Login) ✔️</li>
@@ -33,7 +33,7 @@
 
 <br>
 
-## Setup Project
+## C. SETUP PROJECT
 <b>1. Clone Repository</b>
 
 ```
