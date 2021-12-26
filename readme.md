@@ -4,7 +4,7 @@
 <br>
 
 ## A. LIVE DEMO
-<p>Untuk demo aplikasi dapat diakses pada link berikut</p>
+<span>Untuk demo aplikasi dapat diakses pada link berikut</span>
 <h4>https://ruapps.netlify.app</h4>
 
 <br>
@@ -36,9 +36,13 @@
 
 ## C. USER ROLES
 <p>Credentials user dapat dilihat di initial data & semua passwordnya adalah <i>12345</i></p>
-<b>1. Admin</b> <br>
-<span>Email: ndaru@gmail.com</span> <br>
-<span>password: 12345</span> <br>
+<b>1. Admin</b>
+
+```
+email: ndaru@gmail.com
+password: 12345
+```
+
 <ul>
 	<li>Show & Delete Testimoni</li>
 	<li>Show, Delete, and Send Message</li>
@@ -47,8 +51,12 @@
 <br>
 
 <b>2. Member</b> <br>
-<span>Email: aprian@gmail.com</span> <br>
-<span>password: 12345</span> <br>
+
+```
+email: aprian@gmail.com
+password: 12345
+```
+
 <ul>
 	<li>Create, Show, Update, and Delete Testimoni</li>
 </ul>
