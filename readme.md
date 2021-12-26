@@ -8,7 +8,7 @@
 <span>https://ruapps.netlify.app</span> <br>
 
 <br>
-<b>Link Assets RuApps</b> <br>
+<b>RuApps Assets Credits (Thanks to them) 😊</b> <br>
 <span>https://undraw.co/ (Illustration)</span> <br>
 <span>https://iconscout.com/ (Icons)</span> <br>
 
