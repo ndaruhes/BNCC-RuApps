@@ -4,8 +4,8 @@
 <br>
 
 ## A. SCREENSHOTS
-<img src="https://i2.paste.pics/FGV9E.png" width="47.5%" style="margin-right: 5%;">
-<img src="https://i2.paste.pics/FGV94.png" width="47.5%">
+<img src="https://i2.paste.pics/FGV9E.png" width="47.5%" style="margin-right: 5%; float: left;">
+<img src="https://i2.paste.pics/FGV94.png" width="47.5%" style="float: left;">
 
 <br>
 
