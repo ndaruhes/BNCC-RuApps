@@ -7,6 +7,10 @@
 <span>Untuk demo aplikasi dapat diakses pada link berikut</span>
 <h4>https://ruapps.netlify.app</h4>
 
+<span>Link Assets RuApps</span>
+<h4>https://undraw.co/ (Illustration)</h4>
+<h4>https://iconscout.com/ (Icons)</h4>
+
 <br>
 
 ## B. FEATURES

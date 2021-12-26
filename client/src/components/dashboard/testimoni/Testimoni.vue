@@ -82,15 +82,7 @@ export default {
     },
     methods: {
         getAllTestimoni() {
-            this.user.role == 'Admin'
-                ? this.$store.dispatch(
-                      'testimoni/getAllTestimoni',
-                      'allTestimoni'
-                  )
-                : this.$store.dispatch(
-                      'testimoni/getAllTestimoni',
-                      'userTestimoni'
-                  )
+            this.user.role == 'Admin' ? this.$store.dispatch('testimoni/getAllTestimoni', 'allTestimoni') : this.$store.dispatch('testimoni/getAllTestimoni','userTestimoni')
         },
         setId(id) {
             this.testimoniId = id
