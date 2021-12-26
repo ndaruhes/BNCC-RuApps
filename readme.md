@@ -1,8 +1,12 @@
 <h1 align="center">RuApps - BNCC Elite Team Quest</h1>
 <h3 align="center">Build with ExpressJS & Vue 3</h3>
 
+<br>
+
 ## Live Demo
 <h4>https://ruapps.netlify.app</h4>
+
+<br>
 
 ## Features
 <b>1. FRONTEND</b>
@@ -26,6 +30,8 @@
 	<li>Otentikasi (Signup dan Login) ✔️</li>
 	<li>Seed data atau initial data ✔️</li>
 </ul>
+
+<br>
 
 ## Setup Project
 <b>1. Clone Repository</b>
