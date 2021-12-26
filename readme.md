@@ -4,6 +4,11 @@
 <br>
 
 ## A. LIVE DEMO
+<b>Screenshots</b>
+<img src="https://i2.paste.pics/FGV9E.png" width="100%">
+<img src="https://i2.paste.pics/FGV94.png" width="100%">
+
+<br>
 <b>Untuk demo aplikasi dapat diakses pada link berikut</b> <br>
 <span>https://ruapps.netlify.app</span> <br>
 
@@ -11,6 +16,7 @@
 <b>RuApps Assets Credits. Thanks to them 😊</b> <br>
 <span>https://undraw.co/ (Illustration)</span> <br>
 <span>https://iconscout.com/ (Icons)</span> <br>
+
 
 <br>
 
