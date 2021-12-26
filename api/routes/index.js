@@ -11,7 +11,7 @@ const CheckAuth = require('../middleware/CheckAuth')
 
 
 router.get('/', function(req, res) {
-  res.send('ahai')
+  res.redirect('https://ruapps.netlify.app');
 });
 
 

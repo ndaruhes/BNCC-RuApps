@@ -3,6 +3,11 @@ import store from '@/store'
 
 const routes = [
     {
+        path: '/:pathMatch(.*)*',
+        name: 'not-found',
+        component: () => import(/* webpackChunkName: "NotFound" */ '@/components/errors/404.vue')
+    },
+    {
         path: '/',
         name: 'Home',
         component: () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue')
