@@ -33,7 +33,28 @@
 
 <br>
 
-## C. SETUP PROJECT
+## C. USER ROLES
+<p>Credentials user dapat dilihat di initial data & semua passwordnya adalah <i>12345</i></p>
+<b>1. Admin</b>
+<span>Email: ndaru@gmail.com</span>
+<span>password: 12345</span>
+<ul>
+	<li>Show & Delete Testimoni</li>
+	<li>Show, Delete, and Send Message</li>
+</ul>
+
+<br>
+
+<b>2. Member</b>
+<span>Email: aprian@gmail.com</span>
+<span>password: 12345</span>
+<ul>
+	<li>Create, Show, Update, and Delete Testimoni</li>
+</ul>
+
+<br>
+
+## D. SETUP PROJECT
 <b>1. Clone Repository</b>
 
 ```

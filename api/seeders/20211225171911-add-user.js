@@ -13,24 +13,24 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        namaLengkap: 'Yosua Gunawan',
-        email: 'yosua@gmail.com',
+        namaLengkap: 'Aprian Tanuwijaya',
+        email: 'aprian@gmail.com',
         password: bcrypt.hashSync('12345', 10, null),
         role: 'Member',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        namaLengkap: 'Mavis Zeng',
-        email: 'mavis@gmail.com',
+        namaLengkap: 'Diandra Raselina',
+        email: 'diandra@gmail.com',
         password: bcrypt.hashSync('12345', 10, null),
         role: 'Member',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        namaLengkap: 'Handy Darmawan',
-        email: 'handy@gmail.com',
+        namaLengkap: 'Reynaldi Noordien',
+        email: 'reynaldi@gmail.com',
         password: bcrypt.hashSync('12345', 10, null),
         role: 'Member',
         createdAt: new Date(),
