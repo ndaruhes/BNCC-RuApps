@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-6 text">
                 <span class="title">Upss, Page Not Found <i class="uil uil-confused ms-1"></i></span>
-                <span class="desc">Halaman yang anda tuju tidak dapat ditemukan atau mungkin sedang dalam maintenance</span>
+                <span class="desc">Halaman yang anda tuju tidak dapat ditemukan atau mungkin sudah kadaluarsa</span>
             </div>
         </div>
     </div>
