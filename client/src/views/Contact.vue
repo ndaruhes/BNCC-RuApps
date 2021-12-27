@@ -10,18 +10,18 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label>Email</label>
-                            <input type="email" class="form-control" :class="{'is-invalid': formErrors.email && formErrors.email.length > 0}" placeholder="ex: muhamad.ndaru@gmail.com" v-model="form.email">
-                            <small class="text-danger" v-if="formErrors.email">*{{formErrors.email[0]}}</small>
+                            <input type="email" class="form-control" :class="{'is-invalid': formErrors && formErrors.email && formErrors.email.length > 0}" placeholder="ex: muhamad.ndaru@gmail.com" v-model="form.email">
+                            <small class="text-danger" v-if="formErrors && formErrors.email">*{{formErrors.email[0]}}</small>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Nama Lengkap</label>
-                            <input type="text" class="form-control" :class="{'is-invalid': formErrors.namaLengkap && formErrors.namaLengkap.length > 0}" placeholder="ex: Muhamad Ndaru" v-model="form.namaLengkap">
-                            <small class="text-danger" v-if="formErrors.namaLengkap">*{{formErrors.namaLengkap[0]}}</small>
+                            <input type="text" class="form-control" :class="{'is-invalid': formErrors && formErrors.namaLengkap && formErrors.namaLengkap.length > 0}" placeholder="ex: Muhamad Ndaru" v-model="form.namaLengkap">
+                            <small class="text-danger" v-if="formErrors && formErrors.namaLengkap">*{{formErrors.namaLengkap[0]}}</small>
                         </div>
                         <div class="form-group col-md-12">
                             <label>Pesan / Keluhan</label>
-                            <textarea class="form-control" :class="{'is-invalid': formErrors.pesan && formErrors.pesan.length > 0}" placeholder="Masukkan pesan disini" rows="5" v-model="form.pesan"></textarea>
-                            <small class="text-danger" v-if="formErrors.pesan">*{{formErrors.pesan[0]}}</small>
+                            <textarea class="form-control" :class="{'is-invalid': formErrors && formErrors.pesan && formErrors.pesan.length > 0}" placeholder="Masukkan pesan disini" rows="5" v-model="form.pesan"></textarea>
+                            <small class="text-danger" v-if="formErrors && formErrors.pesan">*{{formErrors.pesan[0]}}</small>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-dark btn-sm d-flex" :disabled="btnLoading">
@@ -62,7 +62,7 @@ export default {
     methods: {
         submit() {
             this.$store
-                .dispatch('contact/storeMessage', this.form)
+                .dispatch('message/storeMessage', this.form)
                 .then((res) => {
                     if (res.status === 200) {
                         this.form.email = ''

@@ -8,7 +8,10 @@
 
         <!-- SECTION TITLE -->
         <div class="section-title">
-            <h1><i class="uil uil-laughing me-1"></i>Testimoni Member</h1>
+            <h1>
+                <i class="uil uil-laughing"></i>
+                Testimoni {{user.role == 'Admin' ? 'Member' : 'Kamu'}}
+            </h1>
             <div class="line"></div>
             <button class="btn btn-dark btn-sm add-btn" v-if="user.role == 'Member'" data-bs-toggle="modal" data-bs-target="#addModal">Tambah<i class="uil uil-plus ms-1"></i></button>
         </div>
@@ -82,7 +85,15 @@ export default {
     },
     methods: {
         getAllTestimoni() {
-            this.user.role == 'Admin' ? this.$store.dispatch('testimoni/getAllTestimoni', 'allTestimoni') : this.$store.dispatch('testimoni/getAllTestimoni','userTestimoni')
+            this.user.role == 'Admin'
+                ? this.$store.dispatch(
+                      'testimoni/getAllTestimoni',
+                      'allTestimoni'
+                  )
+                : this.$store.dispatch(
+                      'testimoni/getAllTestimoni',
+                      'userTestimoni'
+                  )
         },
         setId(id) {
             this.testimoniId = id

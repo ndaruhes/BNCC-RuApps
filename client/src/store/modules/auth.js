@@ -41,18 +41,21 @@ export default {
         async login({commit, dispatch}, credentials) {
             commit('SET_FORM_ERRORS', {}, {root: true})
             commit('SET_BUTTON_LOADING', true, {root: true})
-            await axios.post('login', credentials).then(res => {
+            let response = await axios.post('login', credentials).then(res => {
                 commit('SET_BUTTON_LOADING', false, {root: true})  
                 window.notyf.success(res.data.message)
                 dispatch('attempt', res.data.token)
                 router.push('/')
+                return res
             }).catch(err => {
                 commit('SET_BUTTON_LOADING', false, {root: true})
                 if(err.response){
                     commit('SET_FORM_ERRORS', err.response.data.errors, {root: true})
                 }
                 window.notyf.error(err.response.data.message)
+                return err.response
             })
+            return response
         },
         async attempt({commit, state}, token){
             if(token){

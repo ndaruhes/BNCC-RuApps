@@ -36,7 +36,7 @@ module.exports = {
             pesan: req.body.pesan
         }
 
-        if(formValidation(messageReq, req.url) != null) return res.status(400).send(formValidation(messageReq, req.url))
+        if(formValidation(messageReq) != null) return res.status(400).send(formValidation(messageReq))
         
         try{
             const newMessage = await Contact.create(messageReq);
@@ -79,7 +79,7 @@ function findMessage(id){
     return Contact.findOne({where: {id: id}})
 }
 
-function formValidation(dataRequest, url){
+function formValidation(dataRequest){
     let rules = {
         namaLengkap: 'required|min:3',
         email: 'required|email',

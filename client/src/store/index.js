@@ -6,7 +6,7 @@ import message from './modules/message'
 const stores = createStore({
     state: {
         btnLoading: false,
-        formErrors: []
+        formErrors: {}
     },
     mutations: {
         SET_BUTTON_LOADING(state, status){

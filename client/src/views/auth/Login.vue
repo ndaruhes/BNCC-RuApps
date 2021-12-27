@@ -7,13 +7,13 @@
                 <form action="" @submit.prevent="login">
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" :class="{'is-invalid': formErrors.email && formErrors.email.length > 0}" placeholder="ex: ndaru@yourmail.com" v-model="form.email">
-                        <small class="text-danger" v-if="formErrors.email">*{{formErrors.email[0]}}</small>
+                        <input type="email" class="form-control" :class="{'is-invalid': formErrors && formErrors.email && formErrors.email.length > 0}" placeholder="ex: ndaru@yourmail.com" v-model="form.email">
+                        <small class="text-danger" v-if="formErrors && formErrors.email">*{{formErrors.email[0]}}</small>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" :class="{'is-invalid': formErrors.password && formErrors.password.length > 0}" placeholder="Your password..." v-model="form.password">
-                        <small class="text-danger" v-if="formErrors.password">*{{formErrors.password[0]}}</small>
+                        <input type="password" class="form-control" :class="{'is-invalid': formErrors && formErrors.password && formErrors.password.length > 0}" placeholder="Your password..." v-model="form.password">
+                        <small class="text-danger" v-if="formErrors && formErrors.password">*{{formErrors.password[0]}}</small>
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="rememberCheck" v-model="form.rememberMe">

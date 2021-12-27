@@ -7,23 +7,23 @@
                 <form action="" @submit.prevent="register">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
-                        <input type="text" class="form-control" :class="{'is-invalid': formErrors.namaLengkap && formErrors.namaLengkap.length > 0}" placeholder="ex: Muhamad Ndaru" v-model="form.namaLengkap">
-                        <small class="text-danger" v-if="formErrors.namaLengkap">*{{formErrors.namaLengkap[0]}}</small>
+                        <input type="text" class="form-control" :class="{'is-invalid': formErrors && formErrors.namaLengkap && formErrors.namaLengkap.length > 0}" placeholder="ex: Muhamad Ndaru" v-model="form.namaLengkap">
+                        <small class="text-danger" v-if="formErrors && formErrors.namaLengkap">*{{formErrors.namaLengkap[0]}}</small>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" :class="{'is-invalid': formErrors.email && formErrors.email.length > 0}" placeholder="ex: ndaru@yourmail.com" v-model="form.email">
-                        <small class="text-danger" v-if="formErrors.email">*{{formErrors.email[0]}}</small>
+                        <input type="email" class="form-control" :class="{'is-invalid': formErrors && formErrors.email && formErrors.email.length > 0}" placeholder="ex: ndaru@yourmail.com" v-model="form.email">
+                        <small class="text-danger" v-if="formErrors && formErrors.email">*{{formErrors.email[0]}}</small>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" :class="{'is-invalid': formErrors.password && formErrors.password.length > 0}" placeholder="Your password..." v-model="form.password">
-                        <small class="text-danger" v-if="formErrors.password">*{{formErrors.password[0]}}</small>
+                        <input type="password" class="form-control" :class="{'is-invalid': formErrors && formErrors.password && formErrors.password.length > 0}" placeholder="Your password..." v-model="form.password">
+                        <small class="text-danger" v-if="formErrors && formErrors.password">*{{formErrors.password[0]}}</small>
                     </div>
                     <div class="form-group">
                         <label>Konfirmasi Password</label>
-                        <input type="password" class="form-control" :class="{'is-invalid': formErrors.confirmPassword && formErrors.confirmPassword.length > 0}" placeholder="Confirm password..." v-model="form.confirmPassword">
-                        <small class="text-danger" v-if="formErrors.confirmPassword">*{{formErrors.confirmPassword[0]}}</small>
+                        <input type="password" class="form-control" :class="{'is-invalid': formErrors && formErrors.confirmPassword && formErrors.confirmPassword.length > 0}" placeholder="Confirm password..." v-model="form.confirmPassword">
+                        <small class="text-danger" v-if="formErrors && formErrors.confirmPassword">*{{formErrors.confirmPassword[0]}}</small>
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="rememberCheck">
