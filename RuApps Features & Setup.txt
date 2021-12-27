@@ -1,2 +1,6 @@
 Penjelasan fitur dan setup project dapat diakses di link repository ini (di bagian bawah / readme.md)
 https://github.com/ndaruhes/BNCC-RuApps
+
+
+Demo Aplikasi
+https://ruapps.netlify.app/
